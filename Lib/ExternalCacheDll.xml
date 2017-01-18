@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExternalCacheDll</name>
+    </assembly>
+    <members>
+        <member name="T:cn.andrewwang.Longwang.ExternalCacheDll.BasicDemandDataSet`1">
+            <summary>
+            基础数据 需求
+            </summary>
+        </member>
+        <member name="T:cn.andrewwang.Longwang.ExternalCacheDll.BaseDataSet`1">
+            <summary>
+            有两种数据格式：
+            1. Property ： 属性，采用"-"分隔
+            2. Key ： 映射主键，采用"_"分隔
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.BaseBasicDataSet`1.GetDataList``1(cn.andrewwang.Longwang.ExternalCacheDll.BaseBasicDataSet{`0}.FnDBGetDataById{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            批量获取数据
+            </summary>
+            <typeparam name="TDataType"></typeparam>
+            <param name="fnDBGetDataById"></param>
+            <param name="cacheKeyList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.BasicDemandDataSet`1.UpdateData(cn.andrewwang.Longwang.ExternalCacheDll.BaseBasicDataSet{`0}.FnDBUpdateData,cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.FnCacheCheckAndUpdateData{`0},System.Object,`0)">
+            <summary>
+            DB更新成功是必须保证的，Cache更新结果成功与否是特例化处理
+            </summary>
+            <param name="fnDBUpdateData"></param>
+            <param name="fnCacheCheckAndUpdateData"></param>
+            <param name="param">自定义参数</param>
+            <param name="data"></param>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.BasicDemandDataSet`1.UpdateDataPart(cn.andrewwang.Longwang.ExternalCacheDll.BaseBasicDataSet{`0}.FnDBUpdateData,System.Object,`0)">
+            <summary>
+            更新部分数据
+            DB更新成功是必须保证的，Cache更新结果成功与否是特例化处理
+            </summary>
+            <param name="fnDBUpdateDataPart"></param>
+            <param name="fnCacheCheckAndUpdateData"></param>
+            <param name="param">自定义参数</param>
+            <param name="data"></param>
+        </member>
+        <!-- 对于成员“M:cn.andrewwang.Longwang.ExternalCacheDll.BasicDemandDataSet`1.UpdateListData``1(cn.andrewwang.Longwang.ExternalCacheDll.BasicDemandDataSet{`0}.FnDBUpdateListData{``0},cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.FnCacheCheckAndUpdateData{`0},System.Object,``0,`0)”忽略有格式错误的 XML 注释 -->
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.BasicDemandDataSet`1.UpdateListData``1(cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.FnCacheCheckAndUpdateData{`0},System.Object,``0)">
+            <summary>
+            Cache自定义更新。Cache更新结果成功与否是特例化处理
+            </summary>
+            <typeparam name="TKeyType">ToString()返回的是Key</typeparam>
+            <param name="fnCacheCheckAndUpdateData"></param>
+            <param name="param">自定义参数</param>
+            <param name="key"></param>
+        </member>
+        <!-- 对于成员“M:cn.andrewwang.Longwang.ExternalCacheDll.BasicDemandDataSet`1.UpdateListData``1(cn.andrewwang.Longwang.ExternalCacheDll.BasicDemandDataSet{`0}.FnDBUpdateListData{``0},``0,`0)”忽略有格式错误的 XML 注释 -->
+        <member name="T:cn.andrewwang.Longwang.ExternalCacheDll.AppDemandDataSet`1">
+            <summary>
+            应用数据 需求
+            </summary>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.AppDemandDataSet`1.GetDataList``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            批量获取数据
+            </summary>
+            <typeparam name="TKeyType"></typeparam>
+            <param name="keyList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.AppDemandDataSet`1.UpdateData``1(cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.FnCacheCheckAndUpdateData{`0},System.Object,System.Boolean,``0,`0)">
+            <summary>
+            自定义处理函数的更新
+            </summary>
+            <typeparam name="TKeyType">ToString()返回的是Key</typeparam>
+            <param name="fnCacheCheckAndUpdateData"></param>
+            <param name="param">自定义参数</param>
+            <param name="ignoreTryFail">忽略失败，不抛出异常</param>
+            <param name="key"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.AppDemandDataSet`1.UpdateData``1(``0,`0)">
+            <summary>
+            更新
+            </summary>
+            <param name="key"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.AppDemandDataSet`1.UpdateListData``1(cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.FnCacheCheckAndUpdateData{`0},System.Object,``0,`0)">
+            <summary>
+            DB更新成功是必须保证的，Cache更新结果成功与否是特例化处理
+            </summary>
+            <typeparam name="TKeyType">ToString()返回的是Key</typeparam>
+            <param name="fnCacheCheckAndUpdateData"></param>
+            <param name="param">自定义参数</param>
+            <param name="key"></param>
+            <param name="data"></param>
+        </member>
+        <member name="T:cn.andrewwang.Longwang.ExternalCacheDll.DataSetProperty">
+            <summary>
+            数据集的通用属性，减少自定义
+            </summary>
+        </member>
+        <member name="F:cn.andrewwang.Longwang.ExternalCacheDll.DataSetProperty.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="T:cn.andrewwang.Longwang.ExternalCacheDll.BasicStaticDataSet`1">
+            <summary>
+            基础数据 静态(完整映射采用数据Id列表映射方式)
+            </summary>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.BasicStaticDataSet`1.FnCacheCheckAndUpdateData4Add2DataCache(System.Collections.Generic.Dictionary{System.String,System.String}@,System.Object)">
+            <summary>
+            包含到列表更新，只用于列表更新（cachePropertyIdList）
+            </summary>
+            <param name="data"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="P:cn.andrewwang.Longwang.ExternalCacheDll.BasicStaticDataSet`1.ListCacheFullKey">
+            <summary>
+            完整路径，控制整个数据集
+            </summary>
+        </member>
+        <member name="T:cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService">
+            <summary>
+            基于enyimmemcached，提供字符串/对象的操作。
+            字符串内部是字节流传输，编码是UTF8。
+            </summary>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.CheckAndUpdate``1(cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.FnCacheCheckAndUpdateData{``0},System.Int32,System.Boolean,System.String,System.TimeSpan,System.Object)">
+            <summary>
+            无脏数据更新，更新失败CacheException
+            </summary>
+            <typeparam name="TDataType">自定义处理函数的输入数据的类型</typeparam>
+            <exception cref="T:cn.andrewwang.Longwang.ExternalCacheDll.CacheException">多次更新失败的异常</exception>
+            <param name="fnCacheCheckAndUpdateData"></param>
+            <param name="maxTryNum">失败后允许更新的最多次数</param>
+            <param name="ignoreTryFail">忽略失败，不抛出异常</param>
+            <param name="key"></param>
+            <param name="validFor"></param>
+            <param name="param">自定义参数</param>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.GenerateStandardCacheKeyCategory(System.String,System.String,System.String)">
+            <summary>
+            子系统类别_类名称_数据名称
+            </summary>
+            <param name="sysName"></param>
+            <param name="className"></param>
+            <param name="dataName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.GenerateStandardCacheKeyCategory(System.String,System.String)">
+            <summary>
+            类路径_数据名称
+            </summary>
+            <param name="classPath"></param>
+            <param name="dataName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.GenerateCacheKeyCategory(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            字符串用"_"拼接
+            </summary>
+            <param name="sl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.GenerateStandardCacheKey(System.String,System.String,System.String,System.String)">
+            <summary>
+            子系统类别_类名称_数据名称_key
+            </summary>
+            <param name="sysName"></param>
+            <param name="className"></param>
+            <param name="dataName"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.GenerateCacheKey(System.String,System.String)">
+            <summary>
+            category_key
+            </summary>
+            <param name="category"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.GenerateCacheProperty(System.String,System.String)">
+            <summary>
+            category属性：category-property
+            </summary>
+            <param name="category"></param>
+            <param name="property"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.FnCacheCheckAndUpdateData`1”忽略有格式错误的 XML 注释 -->
+        <member name="T:cn.andrewwang.Longwang.ExternalCacheDll.MemcachedService.FnUpdateData`1">
+            <summary>
+            直接处理数据
+            </summary>
+            <typeparam name="TDataType"></typeparam>
+            <param name="data"></param>
+        </member>
+    </members>
+</doc>

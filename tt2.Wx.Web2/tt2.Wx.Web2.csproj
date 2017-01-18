@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88CF23AF-6270-4574-BABC-1501DE53D395}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tt2.Wx.Web2</RootNamespace>
+    <AssemblyName>tt2.Wx.Web2</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJson">
+      <HintPath>..\Lib\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\WeixinController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\HttpService.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="App_Data\WxData.cs" />
+    <Compile Include="App_Data\WxConfig.cs" />
+    <Compile Include="App_Data\WxHttp.cs" />
+    <Compile Include="App_Data\WxApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Css\Customized\customizedcity.css" />
+    <Content Include="Css\Customized\CustomizedCourse.css" />
+    <Content Include="Css\Customized\CustomizedList.css" />
+    <Content Include="Css\Customized\CustomizedMessage.css" />
+    <Content Include="Css\Customized\CustomizedSubmit.css" />
+    <Content Include="Css\Customized\serveList.css" />
+    <Content Include="Css\Customized\zepto.mdatetimer.css" />
+    <Content Include="Css\Customized\定制.txt" />
+    <Content Include="Css\Home\bulter.css" />
+    <Content Include="Css\Home\bulterDetail.css" />
+    <Content Include="Css\Home\bulterHome.css" />
+    <Content Include="Css\Home\businessProduct.css" />
+    <Content Include="Css\Home\doorticket.css" />
+    <Content Include="Css\Home\food.css" />
+    <Content Include="Css\Home\foodDetail.css" />
+    <Content Include="Css\Home\home.css" />
+    <Content Include="Css\Home\specialty.css" />
+    <Content Include="Css\Home\specialtydetail.css" />
+    <Content Include="Css\Home\首页.txt" />
+    <Content Include="Css\lib\animate.min.css" />
+    <Content Include="Css\lib\mobiscroll.css" />
+    <Content Include="Css\lib\mobiscroll_date.css" />
+    <Content Include="Css\lib\normalize3.0.2.min.css" />
+    <Content Include="Css\lib\swiper-3.3.1.min.css" />
+    <Content Include="Css\Mine\aboutOur.css" />
+    <Content Include="Css\Mine\contactUs.css" />
+    <Content Include="Css\Mine\login.css" />
+    <Content Include="Css\Mine\mine.css" />
+    <Content Include="Css\Mine\mineeditprofile.css" />
+    <Content Include="Css\Mine\mineredevlope.css" />
+    <Content Include="Css\Mine\mineupdata.css" />
+    <Content Include="Css\Mine\myOrder.css" />
+    <Content Include="Css\Mine\register.css" />
+    <Content Include="Css\Mine\我的.txt" />
+    <Content Include="Css\Orderform\currentOrder.css" />
+    <Content Include="Css\Orderform\historyOrder.css" />
+    <Content Include="Css\Orderform\orderFinishi.css" />
+    <Content Include="Css\Orderform\orderNopay.css" />
+    <Content Include="Css\Orderform\orderPay.css" />
+    <Content Include="Css\Orderform\orderWrite.css" />
+    <Content Include="Css\Orderform\refoundreson.css" />
+    <Content Include="Css\Orderform\订单.txt" />
+    <Content Include="Css\public.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fontawesome\css\font-awesome.css" />
+    <Content Include="fontawesome\css\font-awesome.min.css" />
+    <Content Include="fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Html5\Customized\CustomizedCourse.html" />
+    <Content Include="Html5\Customized\CustomizedList.html" />
+    <Content Include="Html5\Customized\CustomizedMessage.html" />
+    <Content Include="Html5\Customized\CustomizedSubmit.html" />
+    <Content Include="Html5\Customized\ServeList.html" />
+    <Content Include="Html5\Customized\定制.txt" />
+    <Content Include="Html5\Home\bulter.html" />
+    <Content Include="Html5\Home\bulterDetail.html" />
+    <Content Include="Html5\Home\bulterHome.html" />
+    <Content Include="Html5\Home\businessProduct.html" />
+    <Content Include="Html5\Home\doorticket.html" />
+    <Content Include="Html5\Home\food.html" />
+    <Content Include="Html5\Home\foodDetail.html" />
+    <Content Include="Html5\Home\home.html" />
+    <Content Include="Html5\Home\specialty.html" />
+    <Content Include="Html5\Home\specialtydetail.html" />
+    <Content Include="Html5\Home\首页.txt" />
+    <Content Include="Html5\Mine\aboutOur.html" />
+    <Content Include="Html5\Mine\contactUs.html" />
+    <Content Include="Html5\Mine\forgetpass.html" />
+    <Content Include="Html5\Mine\login.html" />
+    <Content Include="Html5\Mine\mine.html" />
+    <Content Include="Html5\Mine\minebirthupdate.html" />
+    <Content Include="Html5\Mine\minecaridupdate.html" />
+    <Content Include="Html5\Mine\minecustom.html" />
+    <Content Include="Html5\Mine\mineEditprofile.html" />
+    <Content Include="Html5\Mine\minemobileupdate.html" />
+    <Content Include="Html5\Mine\minenameupdate.html" />
+    <Content Include="Html5\Mine\mineredevlope.html" />
+    <Content Include="Html5\Mine\minesexupdate.html" />
+    <Content Include="Html5\Mine\myOrder.html" />
+    <Content Include="Html5\Mine\register.html" />
+    <Content Include="Html5\Mine\我的.txt" />
+    <Content Include="Html5\Orderform\currentOrder.html" />
+    <Content Include="Html5\Orderform\historyOrder.html" />
+    <Content Include="Html5\Orderform\orderFinish.html" />
+    <Content Include="Html5\Orderform\orderNopay.html" />
+    <Content Include="Html5\Orderform\orderPay.html" />
+    <Content Include="Html5\Orderform\orderWrite.html" />
+    <Content Include="Html5\Orderform\refoundreson.html" />
+    <Content Include="Html5\Orderform\订单.txt" />
+    <Content Include="Images\Customized\grayStar.jpg" />
+    <Content Include="Images\Customized\lightstar.jpg" />
+    <Content Include="Images\Customized\list.png" />
+    <Content Include="Images\Customized\lists.png" />
+    <Content Include="Images\Customized\定制.txt" />
+    <Content Include="Images\Home\citydingwei.png" />
+    <Content Include="Images\Home\detail.jpg" />
+    <Content Include="Images\Home\dingwei.png" />
+    <Content Include="Images\Home\foddetail.jpg" />
+    <Content Include="Images\Home\food1.jpg" />
+    <Content Include="Images\Home\foodbuxian.png" />
+    <Content Include="Images\Home\fooddingwei.png" />
+    <Content Include="Images\Home\foodjiantou.png" />
+    <Content Include="Images\Home\foodlaba.png" />
+    <Content Include="Images\Home\foodxiajiantou.png" />
+    <Content Include="Images\Home\foodzhuocan.png" />
+    <Content Include="Images\Home\foodzihzu.png" />
+    <Content Include="Images\Home\geren.png" />
+    <Content Include="Images\Home\gj.jpg" />
+    <Content Include="Images\Home\gouwuche.png" />
+    <Content Include="Images\Home\headimg.jpg" />
+    <Content Include="Images\Home\huimore.png" />
+    <Content Include="Images\Home\jia.png" />
+    <Content Include="Images\Home\jian.png" />
+    <Content Include="Images\Home\jq.jpg" />
+    <Content Include="Images\Home\ms.jpg" />
+    <Content Include="Images\Home\newblter2.jpg" />
+    <Content Include="Images\Home\newbutler.jpg" />
+    <Content Include="Images\Home\nike.jpg" />
+    <Content Include="Images\Home\point.jpg" />
+    <Content Include="Images\Home\pull-icon%402x.png" />
+    <Content Include="Images\Home\sex.jpg" />
+    <Content Include="Images\Home\shoutu1.jpg" />
+    <Content Include="Images\Home\sign.png" />
+    <Content Include="Images\Home\steak.jpg" />
+    <Content Include="Images\Home\titletiao.png" />
+    <Content Include="Images\Home\首页.txt" />
+    <Content Include="Images\Mine\dui.png" />
+    <Content Include="Images\Mine\erweima.png" />
+    <Content Include="Images\Mine\foodImg.jpg" />
+    <Content Include="Images\Mine\logo.jpg" />
+    <Content Include="Images\Mine\mobile.png" />
+    <Content Include="Images\Mine\more.png" />
+    <Content Include="Images\Mine\poto.jpg" />
+    <Content Include="Images\Mine\我的.txt" />
+    <Content Include="Images\more.png" />
+    <Content Include="Images\Orderform\订单.txt" />
+    <Content Include="Index.html" />
+    <Content Include="Js\common.js" />
+    <Content Include="Js\Customized\customizedcity.js" />
+    <Content Include="Js\Customized\customizedcourse.js" />
+    <Content Include="Js\Customized\customizedlist.js" />
+    <Content Include="Js\Customized\CustomizedMessage.js" />
+    <Content Include="Js\Customized\customizedsubmit.js" />
+    <Content Include="Js\Customized\zepto.mdatetimer.js" />
+    <Content Include="Js\Customized\定制.txt" />
+    <Content Include="Js\Home\bulter.js" />
+    <Content Include="Js\Home\bulterdetail.js" />
+    <Content Include="Js\Home\bulterhome.js" />
+    <Content Include="Js\Home\businessproduct.js" />
+    <Content Include="Js\Home\doortucket.js" />
+    <Content Include="Js\Home\food.js" />
+    <Content Include="Js\Home\home.js" />
+    <Content Include="Js\Home\iscroll.js" />
+    <Content Include="Js\Home\specialty.js" />
+    <Content Include="Js\Home\首页.txt" />
+    <Content Include="Js\lib\iscroll5.js" />
+    <Content Include="Js\lib\jquery.qrcode.js" />
+    <Content Include="Js\lib\jquery.qrcode.min.js" />
+    <Content Include="Js\lib\jweixin-1.0.0.js" />
+    <Content Include="Js\lib\mobiscroll.js" />
+    <Content Include="Js\lib\mobiscroll_date.js" />
+    <Content Include="Js\lib\swiper.min.js" />
+    <Content Include="Js\lib\zepto.min.js" />
+    <Content Include="Js\Mine\aboutOur.js" />
+    <Content Include="Js\Mine\forgetpas.js" />
+    <Content Include="Js\Mine\login.js" />
+    <Content Include="Js\Mine\mine.js" />
+    <Content Include="Js\Mine\minebirth.js" />
+    <Content Include="Js\Mine\minecarid.js" />
+    <Content Include="Js\Mine\mineeditprofile.js" />
+    <Content Include="Js\Mine\minemobile.js" />
+    <Content Include="Js\Mine\minename.js" />
+    <Content Include="Js\Mine\minesex.js" />
+    <Content Include="Js\Mine\myOrder.js" />
+    <Content Include="Js\Mine\new_file.js" />
+    <Content Include="Js\Mine\register.js" />
+    <Content Include="Js\Mine\我的.txt" />
+    <Content Include="Js\Orderform\currentorder.js" />
+    <Content Include="Js\Orderform\historyorder.js" />
+    <Content Include="Js\Orderform\ordernopay.js" />
+    <Content Include="Js\Orderform\orderwrite.js" />
+    <Content Include="Js\Orderform\refoundreson.js" />
+    <Content Include="Js\Orderform\订单.txt" />
+    <Content Include="Js\public.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Css\Home\bulter.less" />
+    <Content Include="Css\Home\bulterDetail.less" />
+    <Content Include="Css\Home\bulterHome.less" />
+    <Content Include="Css\Home\businessProduct.less" />
+    <Content Include="Css\Home\doorticket.less" />
+    <Content Include="Css\Home\food.less" />
+    <Content Include="Css\Home\foodDetail.less" />
+    <Content Include="Css\Home\home.less" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Js\Customized\city.json" />
+    <Content Include="fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="fontawesome\fonts\FontAwesome.otf" />
+    <Content Include="Js\city.json" />
+    <None Include="Properties\PublishProfiles\zh.tt2.WxWeb2.0.pubxml" />
+    <Content Include="Scripts\CryptoJs\bower.json" />
+    <Content Include="Scripts\CryptoJs\CONTRIBUTING.md" />
+    <Content Include="Scripts\CryptoJs\docs\QuickStartGuide.wiki" />
+    <Content Include="Scripts\CryptoJs\LICENSE" />
+    <Content Include="Scripts\CryptoJs\package.json" />
+    <Content Include="Scripts\CryptoJs\README.md" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\CryptoJs\aes.js" />
+    <Content Include="Scripts\CryptoJs\cipher-core.js" />
+    <Content Include="Scripts\CryptoJs\core.js" />
+    <Content Include="Scripts\CryptoJs\crypto-js.js" />
+    <Content Include="Scripts\CryptoJs\enc-base64.js" />
+    <Content Include="Scripts\CryptoJs\enc-hex.js" />
+    <Content Include="Scripts\CryptoJs\enc-latin1.js" />
+    <Content Include="Scripts\CryptoJs\enc-utf16.js" />
+    <Content Include="Scripts\CryptoJs\enc-utf8.js" />
+    <Content Include="Scripts\CryptoJs\evpkdf.js" />
+    <Content Include="Scripts\CryptoJs\format-hex.js" />
+    <Content Include="Scripts\CryptoJs\format-openssl.js" />
+    <Content Include="Scripts\CryptoJs\hmac-md5.js" />
+    <Content Include="Scripts\CryptoJs\hmac-ripemd160.js" />
+    <Content Include="Scripts\CryptoJs\hmac-sha1.js" />
+    <Content Include="Scripts\CryptoJs\hmac-sha224.js" />
+    <Content Include="Scripts\CryptoJs\hmac-sha256.js" />
+    <Content Include="Scripts\CryptoJs\hmac-sha3.js" />
+    <Content Include="Scripts\CryptoJs\hmac-sha384.js" />
+    <Content Include="Scripts\CryptoJs\hmac-sha512.js" />
+    <Content Include="Scripts\CryptoJs\hmac.js" />
+    <Content Include="Scripts\CryptoJs\index.js" />
+    <Content Include="Scripts\CryptoJs\lib-typedarrays.js" />
+    <Content Include="Scripts\CryptoJs\md5.js" />
+    <Content Include="Scripts\CryptoJs\mode-cfb.js" />
+    <Content Include="Scripts\CryptoJs\mode-ctr-gladman.js" />
+    <Content Include="Scripts\CryptoJs\mode-ctr.js" />
+    <Content Include="Scripts\CryptoJs\mode-ecb.js" />
+    <Content Include="Scripts\CryptoJs\mode-ofb.js" />
+    <Content Include="Scripts\CryptoJs\pad-ansix923.js" />
+    <Content Include="Scripts\CryptoJs\pad-iso10126.js" />
+    <Content Include="Scripts\CryptoJs\pad-iso97971.js" />
+    <Content Include="Scripts\CryptoJs\pad-nopadding.js" />
+    <Content Include="Scripts\CryptoJs\pad-pkcs7.js" />
+    <Content Include="Scripts\CryptoJs\pad-zeropadding.js" />
+    <Content Include="Scripts\CryptoJs\pbkdf2.js" />
+    <Content Include="Scripts\CryptoJs\rabbit-legacy.js" />
+    <Content Include="Scripts\CryptoJs\rabbit.js" />
+    <Content Include="Scripts\CryptoJs\rc4.js" />
+    <Content Include="Scripts\CryptoJs\ripemd160.js" />
+    <Content Include="Scripts\CryptoJs\sha1.js" />
+    <Content Include="Scripts\CryptoJs\sha224.js" />
+    <Content Include="Scripts\CryptoJs\sha256.js" />
+    <Content Include="Scripts\CryptoJs\sha3.js" />
+    <Content Include="Scripts\CryptoJs\sha384.js" />
+    <Content Include="Scripts\CryptoJs\sha512.js" />
+    <Content Include="Scripts\CryptoJs\tripledes.js" />
+    <Content Include="Scripts\CryptoJs\x64-core.js" />
+    <Content Include="Scripts\Global.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jweixin-1.0.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_DefaultLayout.cshtml" />
+    <Content Include="Views\Weixin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>22311</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:22311/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

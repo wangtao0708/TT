@@ -1,0 +1,7 @@
+2017-01-09 09:47:40.761 WxJsapiAuthorize: strUrl：http://localhost:22311/Index.html
+2017-01-09 09:47:40.765 WxJsapiAuthorize: dtmTicketExpire：1900/1/1 0:00:00
+2017-01-09 09:47:40.767 WxJsapiAuthorize: strJsapiTicket：
+2017-01-09 09:47:40.992 WxJsapiAuthorize: strAccessToken：bjB85BQLv0k2C3yV1zNpdhvpNiw2munnHpyPCGV_eCcpeYCUUkAv-VWcxiCWvX471QR123iDVNo1KIw55Q_4PDVOADlZyWgTT2caumwiG00FBFhAAASOS
+2017-01-09 09:47:41.043 WxJsapiAuthorize: strJsapiTicket：kgt8ON7yVITDhtdwci0qeUXFcoJK_TPR-umrNTg-TLNoNqYiEwwqsgQ9o5fsS3vT-pEyeC0lw7OjYlT5KwR2jA
+2017-01-09 09:47:41.045 WxJsapiAuthorize: strParam：jsapi_ticket=kgt8ON7yVITDhtdwci0qeUXFcoJK_TPR-umrNTg-TLNoNqYiEwwqsgQ9o5fsS3vT-pEyeC0lw7OjYlT5KwR2jA&noncestr=30caee9e4b164a4f99ae6dd7c5b7f746&timestamp=1483926461&url=http://localhost:22311/Index.html
+2017-01-09 09:47:41.047 WxJsapiAuthorize: strSignature：D5BA46EFE23AB2A777D34E31DA18DB86CB10BD99
